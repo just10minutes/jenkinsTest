@@ -16,5 +16,10 @@ pipeline {
         echo 'Deploying....'
       }
     }
+    stage('FixedToDelimiter') {
+      steps {
+        sh 'python "C:\\Users\\c24088745\\Documents\\MyFiles\\myowntestings\\FixedWidthToDelimiter\\FixedWidthToDelimiter.py" -i Tap80.txt -c tap80Config.txt'
+      }
+    }
   }
 }
